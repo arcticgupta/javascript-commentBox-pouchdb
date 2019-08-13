@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Comment Widget</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css"/>
+</head>
+
+<body onload="showCase()">
+	<h3>User: <span id="userName">UNKNOWN</span></h3>
+	<input type="text" placeholder="Name" id="name" class="name-handle">
+	<button id="setName" onclick="toggleSet()" style="display:inline-block" class="set-btn">Set</button>
+	<button id="changeName" onclick="toggleSet()" style="display:none" class="change-btn">Change Name</button>
+
+	<div id="commentArea" style="margin-block-start: 2em;">
+		<textarea rows="2" id="commentText" class="comment-box" placeholder="Join the discussion...."></textarea>
+		<div>
+			<button id="addComment" onclick="addComment()" class="add-btn">Submit</button>
+		</div>
+	</div>
+
+</body>
+<script src="//cdn.jsdelivr.net/npm/pouchdb@7.1.1/dist/pouchdb.min.js"></script>
+<script src="main.js"></script>
+</html>
